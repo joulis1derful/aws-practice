@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "strict": true,
+    "outDir": "src/dist",
+    "sourceMap": true
+  },
+  "lib": [
+    "es5",
+    "es2015.promise"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
