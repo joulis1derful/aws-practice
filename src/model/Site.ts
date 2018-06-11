@@ -1,6 +1,6 @@
 export enum Site {
-    ROZETKA,
-    ALLO,
-    COMFy,
-    STYLUS
+    ROZETKA = 'ROZETKA.COM.UA',
+    ALLO = 'ALLO.UA',
+    COMFy = 'COMFY.UA',
+    STYLUS = 'STYLUS.UA'
 }

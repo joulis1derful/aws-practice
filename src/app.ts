@@ -1,14 +1,25 @@
 import * as AWS from 'aws-sdk'
 import * as express from 'express'
+import { Item } from './model/Item'
+import { Site } from './model/Site'
+import { sequelize } from './sequelize'
 
 const app = express()
 
 app.listen(3000, () => {
-    console.log('Example app listening on port 3000!')
+  console.log('Example app listening on port 3000!')
 })
 
-app.get('/', (req, res) => {
-    res.write('<h1>Hello World!</h1>')
+app.get('/', async (req, res) => {
+  res.write('<h1>Hello World!</h1>')
+
+  const notebook: Item = new Item()
+  notebook.name = 'mjlq2'
+  notebook.price = 2000
+  notebook.currency = '$'
+  notebook.source = Site.ROZETKA
+
+  await sequelize.sync({ force: true })
    /*
    AWS.config.loadFromPath('credentials.json')
 

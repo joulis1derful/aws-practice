@@ -1,15 +1,16 @@
-import { BelongsTo, Column, Model, Table } from 'sequelize-typescript'
+import { BelongsTo, Column, DataType, Model, Table } from 'sequelize-typescript'
 import { Category } from './Category'
-import { Site } from './Site'
 
 @Table({ tableName: 'item', timestamps: false, version: false, underscored: true })
 export class Item extends Model<Item> {
-  @Column
+  @Column({ type: DataType.TEXT })
   name: string
-  @Column
+  @Column({ type: DataType.DOUBLE })
   price: number
-  @Column
-  source: Site
+  @Column({ type: DataType.TEXT })
+  source: string
+  @Column({ type: DataType.TEXT })
+  currency: string
 
   @BelongsTo(() => Category, 'category_id')
     category: Category
