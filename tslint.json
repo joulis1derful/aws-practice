@@ -10,6 +10,7 @@
       "semicolon": false,
       "ter-indent": [true, 2, { "SwitchCase": 1 }],
       "trailing-comma": false,
+      "no-trailing-whitespace": [false],
       "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
       "object-shorthand-properties-first": false,
       "import-name": false
